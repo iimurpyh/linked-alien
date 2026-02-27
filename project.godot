@@ -11,8 +11,15 @@ config_version=5
 [application]
 
 config/name="LinkedAlien"
+run/main_scene="uid://bsysuiyx4dqy"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=860
+window/size/viewport_height=540
+window/stretch/mode="canvas_items"
 
 [physics]
 

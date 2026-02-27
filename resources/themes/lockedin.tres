@@ -1,0 +1,21 @@
+[gd_resource type="Theme" format=3 uid="uid://c4vir164jmy38"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_skxos"]
+bg_color = Color(0.89, 0.89, 0.89, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ug1nb"]
+bg_color = Color(0.65, 0.65, 0.65, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nhmv1"]
+bg_color = Color(0.16400002, 0.120000005, 0.2, 1)
+
+[resource]
+ContentPanel/base_type = &"Panel"
+ContentPanel/styles/panel = SubResource("StyleBoxFlat_skxos")
+MarginContainer/constants/margin_bottom = 2
+MarginContainer/constants/margin_left = 10
+MarginContainer/constants/margin_right = 10
+MarginContainer/constants/margin_top = 2
+Panel/styles/panel = SubResource("StyleBoxFlat_ug1nb")
+TitleBar/base_type = &"Panel"
+TitleBar/styles/panel = SubResource("StyleBoxFlat_nhmv1")
