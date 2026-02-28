@@ -35,6 +35,13 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_efxa6"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dg77c"]
+bg_color = Color(0.8983909, 0.89839107, 0.8983907, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [node name="Main" type="Node2D" unique_id=1141253464]
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=507379205]
@@ -168,8 +175,101 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 39.0
+offset_left = 46.0
 offset_top = -20.0
-offset_right = 79.0
+offset_right = 86.0
 offset_bottom = 19.999998
+grow_vertical = 2
+
+[node name="LeftSide" type="Control" parent="UI/Window/App/Webpage" unique_id=1500677631]
+layout_mode = 1
+anchor_top = 0.09900001
+anchor_bottom = 1.0
+offset_top = -0.05500412
+offset_right = 166.0
+grow_vertical = 2
+
+[node name="Profile" type="Panel" parent="UI/Window/App/Webpage/LeftSide" unique_id=895585303]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 29.0
+offset_right = 148.0
+offset_bottom = 137.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dg77c")
+
+[node name="ProfileStats" type="Panel" parent="UI/Window/App/Webpage/LeftSide" unique_id=2120200546]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 155.0
+offset_right = 148.0
+offset_bottom = 340.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dg77c")
+
+[node name="Karma" type="Label" parent="UI/Window/App/Webpage/LeftSide/ProfileStats" unique_id=544657955]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -62.0
+offset_top = 6.0
+offset_right = -10.0
+offset_bottom = 34.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "$0"
+
+[node name="Interviews" type="Label" parent="UI/Window/App/Webpage/LeftSide/ProfileStats" unique_id=960694126]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -52.0
+offset_top = -37.0
+offset_bottom = -9.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "0"
+
+[node name="Applications" type="Label" parent="UI/Window/App/Webpage/LeftSide/ProfileStats" unique_id=752607098]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -52.0
+offset_top = -76.0
+offset_bottom = -48.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "0"
+
+[node name="MainContent" type="Control" parent="UI/Window/App/Webpage" unique_id=1689114421]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -152.0
+offset_top = 44.0
+offset_right = 199.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RightSide" type="Control" parent="UI/Window/App/Webpage" unique_id=1889789760]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -131.0
+offset_top = 44.0
+grow_horizontal = 0
 grow_vertical = 2
