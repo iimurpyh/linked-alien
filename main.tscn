@@ -3,10 +3,10 @@
 [ext_resource type="Theme" uid="uid://c4vir164jmy38" path="res://resources/themes/lockedin.tres" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://chkvr1t8ndosd" path="res://ToolkitPanel.tscn" id="2_toolkit"]
 [ext_resource type="PackedScene" uid="uid://br84nqe3fyqup" path="res://job_listing.tscn" id="3_h2yge"]
-[ext_resource type="PackedScene" uid="uid://do46707ypeskt" path="res://TemporaryPanel.tscn" id="4_temp_panel"]
 [ext_resource type="PackedScene" path="res://KarmaStorePanel.tscn" id="5_karma_store"]
 [ext_resource type="PackedScene" path="res://ProfilePanel.tscn" id="6_profile"]
 [ext_resource type="PackedScene" path="res://StatsPanel.tscn" id="7_stats"]
+[ext_resource type="Script" uid="uid://ywagr8xhhdx0" path="res://main.gd" id="8_main_script"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ig7tw"]
 bg_color = Color(0.8089983, 0.8089983, 0.80899817, 1)
@@ -42,6 +42,7 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="Main" type="Node2D" unique_id=1141253464]
+script = ExtResource("8_main_script")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=507379205]
 
@@ -115,14 +116,32 @@ offset_bottom = 0.04399872
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0xm2m")
 
+[node name="Store" type="Button" parent="UI/Window/App/Webpage/MenuBar" unique_id=1945130140]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.92300004
+anchor_right = 1.0
+anchor_bottom = 0.998
+offset_left = -16.720032
+offset_right = -16.440063
+offset_bottom = -0.010807037
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_hover_color = Color(0.68235296, 0.68235296, 0.68235296, 1)
+theme_override_font_sizes/font_size = 9
+theme_override_styles/normal = SubResource("StyleBoxFlat_h2yge")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7mycd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_272bh")
+text = "Store"
+
 [node name="Messages" type="Button" parent="UI/Window/App/Webpage/MenuBar" unique_id=1945130139]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.92300004
 anchor_right = 1.0
 anchor_bottom = 0.998
-offset_left = -14.720032
-offset_right = -14.0
+offset_left = -77.72003
+offset_right = -77.0
 offset_bottom = -0.010807037
 grow_horizontal = 0
 theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
@@ -139,8 +158,8 @@ anchors_preset = -1
 anchor_left = 0.92300004
 anchor_right = 1.0
 anchor_bottom = 0.998
-offset_left = -70.72003
-offset_right = -70.0
+offset_left = -135.72003
+offset_right = -135.0
 offset_bottom = -0.010807037
 grow_horizontal = 0
 theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
@@ -157,8 +176,8 @@ anchors_preset = -1
 anchor_left = 0.92300004
 anchor_right = 1.0
 anchor_bottom = 0.998
-offset_left = -126.72003
-offset_right = -126.0
+offset_left = -190.72003
+offset_right = -190.0
 offset_bottom = -0.010807037
 grow_horizontal = 0
 theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
@@ -179,13 +198,6 @@ offset_top = -20.0
 offset_right = 86.0
 offset_bottom = 19.999998
 grow_vertical = 2
-
-[node name="TemporaryPanel" parent="UI/Window/App" unique_id=1800727727 instance=ExtResource("4_temp_panel")]
-layout_mode = 0
-offset_left = 193.0
-offset_top = 404.0
-offset_right = 476.0
-offset_bottom = 549.0
 
 [node name="ProfilePanel" parent="UI/Window/App" unique_id=530073761 instance=ExtResource("6_profile")]
 layout_mode = 0
