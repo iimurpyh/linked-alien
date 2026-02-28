@@ -26,6 +26,38 @@ theme_override_font_sizes/font_size = 18
 text = "LockKarma Store"
 horizontal_alignment = 1
 
+[node name="StoreContent" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 56.0
+offset_right = -24.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="InfoLabel" type="Label" parent="StoreContent"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.95, 0.97, 1)
+theme_override_font_sizes/font_size = 11
+text = "Claim investigation tools when you have enough Karma."
+horizontal_alignment = 1
+
+[node name="ClaimImageSearchBtn" type="Button" parent="StoreContent"]
+layout_mode = 2
+text = "Claim Image Search (20 Karma)"
+
+[node name="ClaimConnectionsBtn" type="Button" parent="StoreContent"]
+layout_mode = 2
+text = "Claim Connections (40 Karma)"
+
+[node name="ClaimActivityLogBtn" type="Button" parent="StoreContent"]
+layout_mode = 2
+text = "Claim Activity Logs (60 Karma)"
+
 [node name="CloseBtn" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 1
