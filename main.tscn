@@ -2,6 +2,8 @@
 
 [ext_resource type="Theme" uid="uid://c4vir164jmy38" path="res://resources/themes/lockedin.tres" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://cwtiv0mjrnno8" path="res://ToolkitPanel.tscn" id="2_toolkit"]
+[ext_resource type="PackedScene" uid="uid://temp_panel_001" path="res://TemporaryPanel.tscn" id="3_temp_panel"]
+[ext_resource type="PackedScene" uid="uid://karma_store_001" path="res://KarmaStorePanel.tscn" id="4_karma_store"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ig7tw"]
 bg_color = Color(0.8089983, 0.8089983, 0.80899817, 1)
@@ -35,13 +37,6 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_efxa6"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dg77c"]
-bg_color = Color(0.8983909, 0.89839107, 0.8983907, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
 
 [node name="Main" type="Node2D" unique_id=1141253464]
 
@@ -182,8 +177,28 @@ offset_right = 86.0
 offset_bottom = 19.999998
 grow_vertical = 2
 
+[node name="TemporaryPanel" parent="UI/Window/App" unique_id=1800727727 instance=ExtResource("3_temp_panel")]
+offset_left = 17.0
+offset_top = 135.0
+offset_right = 300.0
+offset_bottom = 280.0
+
 [node name="ToolkitPanel" parent="UI/Window/App" unique_id=142626904 instance=ExtResource("2_toolkit")]
-custom_minimum_size = Vector2(140, 0)
 layout_mode = 0
-position = Vector2(593, 43)
-size = Vector2(200, 500)
+offset_left = 448.0
+offset_top = 88.0
+offset_right = 630.0
+offset_bottom = 449.0
+
+[node name="KarmaStorePanel" parent="UI/Window/App" instance=ExtResource("4_karma_store")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -150.0
+offset_right = 200.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
