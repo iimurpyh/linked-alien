@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://bsysuiyx4dqy"]
 
 [ext_resource type="Theme" uid="uid://c4vir164jmy38" path="res://resources/themes/lockedin.tres" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://cwtiv0mjrnno8" path="res://ToolkitPanel.tscn" id="2_toolkit"]
+[ext_resource type="PackedScene" path="res://ToolkitPanel.tscn" id="2_toolkit"]
+[ext_resource type="PackedScene" uid="uid://br84nqe3fyqup" path="res://job_listing.tscn" id="3_h2yge"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ig7tw"]
 bg_color = Color(0.8089983, 0.8089983, 0.80899817, 1)
@@ -35,13 +36,6 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_efxa6"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dg77c"]
-bg_color = Color(0.8983909, 0.89839107, 0.8983907, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
 
 [node name="Main" type="Node2D" unique_id=1141253464]
 
@@ -183,7 +177,49 @@ offset_bottom = 19.999998
 grow_vertical = 2
 
 [node name="ToolkitPanel" parent="UI/Window/App" unique_id=142626904 instance=ExtResource("2_toolkit")]
-custom_minimum_size = Vector2(140, 0)
+visible = false
 layout_mode = 0
-position = Vector2(593, 43)
-size = Vector2(200, 500)
+offset_left = 593.0
+offset_top = 43.0
+offset_right = 793.0
+offset_bottom = 543.0
+
+[node name="AppContent" type="Control" parent="UI/Window/App" unique_id=469296234]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 35.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bulletin" type="Control" parent="UI/Window/App/AppContent" unique_id=107572087]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BulletinPanels" type="HBoxContainer" parent="UI/Window/App/AppContent/Bulletin" unique_id=1609740487]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="PostScroll" type="ScrollContainer" parent="UI/Window/App/AppContent/Bulletin/BulletinPanels" unique_id=220583290]
+custom_minimum_size = Vector2(325, 0)
+layout_mode = 2
+
+[node name="PostList" type="VBoxContainer" parent="UI/Window/App/AppContent/Bulletin/BulletinPanels/PostScroll" unique_id=182328084]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="JobListing" parent="UI/Window/App/AppContent/Bulletin/BulletinPanels/PostScroll/PostList" unique_id=257471251 instance=ExtResource("3_h2yge")]
+layout_mode = 2
