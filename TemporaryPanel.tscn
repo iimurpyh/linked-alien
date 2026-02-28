@@ -1,13 +1,13 @@
-[gd_scene format=3 uid="uid://b44dwva7njjv5"]
+[gd_scene load_steps=2 format=3 uid="uid://temp_panel_001"]
 
-[ext_resource type="Script" uid="uid://5w03up1cjrs0" path="res://karma_system.gd" id="1_karma"]
+[ext_resource type="Script" path="res://karma_system.gd" id="1_karma"]
 
-[node name="TemporaryPanel" type="Panel" unique_id=710990322]
+[node name="TemporaryPanel" type="Panel"]
 offset_right = 283.0
 offset_bottom = 145.0
 script = ExtResource("1_karma")
 
-[node name="AddKarmaBtn" type="Button" parent="." unique_id=997241368]
+[node name="AddKarmaBtn" type="Button" parent="."]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 8.0
@@ -15,7 +15,7 @@ offset_right = 275.0
 offset_bottom = 50.0
 text = "+1 LockKarma (street cred)"
 
-[node name="OpenKarmaStoreBtn" type="Button" parent="." unique_id=1546508862]
+[node name="OpenKarmaStoreBtn" type="Button" parent="."]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 58.0
@@ -23,7 +23,7 @@ offset_right = 275.0
 offset_bottom = 100.0
 text = "Open LockKarma Store"
 
-[node name="KarmaLabel" type="Label" parent="." unique_id=1777764031]
+[node name="KarmaLabel" type="Label" parent="."]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 110.0
