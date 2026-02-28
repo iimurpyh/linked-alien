@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bsysuiyx4dqy"]
 
 [ext_resource type="Theme" uid="uid://c4vir164jmy38" path="res://resources/themes/lockedin.tres" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://cwtiv0mjrnno8" path="res://ToolkitPanel.tscn" id="2_toolkit"]
+[ext_resource type="PackedScene" uid="uid://chkvr1t8ndosd" path="res://ToolkitPanel.tscn" id="2_toolkit"]
 [ext_resource type="PackedScene" uid="uid://br84nqe3fyqup" path="res://job_listing.tscn" id="3_h2yge"]
-[ext_resource type="PackedScene" path="res://TemporaryPanel.tscn" id="4_temp_panel"]
+[ext_resource type="PackedScene" uid="uid://do46707ypeskt" path="res://TemporaryPanel.tscn" id="4_temp_panel"]
 [ext_resource type="PackedScene" path="res://KarmaStorePanel.tscn" id="5_karma_store"]
 [ext_resource type="PackedScene" path="res://ProfilePanel.tscn" id="6_profile"]
 [ext_resource type="PackedScene" path="res://StatsPanel.tscn" id="7_stats"]
