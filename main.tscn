@@ -2,6 +2,39 @@
 
 [ext_resource type="Theme" uid="uid://c4vir164jmy38" path="res://resources/themes/lockedin.tres" id="1_ig7tw"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ig7tw"]
+bg_color = Color(0.8089983, 0.8089983, 0.80899817, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xm2m"]
+bg_color = Color(0.30940694, 0.29920965, 0.43969783, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h2yge"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7mycd"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_272bh"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1bvp3"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5vw27"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kek77"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lquwl"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4c57u"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_efxa6"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
 [node name="Main" type="Node2D" unique_id=1141253464]
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=507379205]
@@ -55,3 +88,88 @@ custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 text = "LockedIn"
 vertical_alignment = 1
+
+[node name="Webpage" type="Panel" parent="UI/Window/App" unique_id=1473917591]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.07300001
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -0.04000473
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ig7tw")
+
+[node name="MenuBar" type="Panel" parent="UI/Window/App/Webpage" unique_id=550115243]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.09900001
+offset_bottom = 0.04399872
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0xm2m")
+
+[node name="Messages" type="Button" parent="UI/Window/App/Webpage/MenuBar" unique_id=1945130139]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.92300004
+anchor_right = 1.0
+anchor_bottom = 0.998
+offset_left = -14.720032
+offset_right = -14.0
+offset_bottom = -0.010807037
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_hover_color = Color(0.68235296, 0.68235296, 0.68235296, 1)
+theme_override_font_sizes/font_size = 9
+theme_override_styles/normal = SubResource("StyleBoxFlat_h2yge")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7mycd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_272bh")
+text = "Messages"
+
+[node name="Jobs" type="Button" parent="UI/Window/App/Webpage/MenuBar" unique_id=623733113]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.92300004
+anchor_right = 1.0
+anchor_bottom = 0.998
+offset_left = -70.72003
+offset_right = -70.0
+offset_bottom = -0.010807037
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_hover_color = Color(0.68235296, 0.68235296, 0.68235296, 1)
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_1bvp3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5vw27")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kek77")
+text = "Jobs"
+
+[node name="Home" type="Button" parent="UI/Window/App/Webpage/MenuBar" unique_id=1280569439]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.92300004
+anchor_right = 1.0
+anchor_bottom = 0.998
+offset_left = -126.72003
+offset_right = -126.0
+offset_bottom = -0.010807037
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_hover_color = Color(0.68235296, 0.68235296, 0.68235296, 1)
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_lquwl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4c57u")
+theme_override_styles/hover = SubResource("StyleBoxFlat_efxa6")
+text = "Home"
+
+[node name="Logo" type="Panel" parent="UI/Window/App/Webpage/MenuBar" unique_id=138049737]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 39.0
+offset_top = -20.0
+offset_right = 79.0
+offset_bottom = 19.999998
+grow_vertical = 2
