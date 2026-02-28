@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://br84nqe3fyqup" path="res://job_listing.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" path="res://TemporaryPanel.tscn" id="4_temp_panel"]
 [ext_resource type="PackedScene" path="res://KarmaStorePanel.tscn" id="5_karma_store"]
+[ext_resource type="PackedScene" path="res://ProfilePanel.tscn" id="6_profile"]
+[ext_resource type="PackedScene" path="res://StatsPanel.tscn" id="7_stats"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ig7tw"]
 bg_color = Color(0.8089983, 0.8089983, 0.80899817, 1)
@@ -180,10 +182,24 @@ grow_vertical = 2
 
 [node name="TemporaryPanel" parent="UI/Window/App" unique_id=1800727727 instance=ExtResource("4_temp_panel")]
 layout_mode = 0
-offset_left = -130.0
-offset_top = 145.0
-offset_right = 153.0
-offset_bottom = 290.0
+offset_left = 193.0
+offset_top = 404.0
+offset_right = 476.0
+offset_bottom = 549.0
+
+[node name="ProfilePanel" parent="UI/Window/App" unique_id=530073761 instance=ExtResource("6_profile")]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 96.0
+offset_right = 137.0
+offset_bottom = 197.0
+
+[node name="StatsPanel" parent="UI/Window/App" unique_id=212788575 instance=ExtResource("7_stats")]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 233.0
+offset_right = 138.0
+offset_bottom = 452.0
 
 [node name="ToolkitPanel" parent="UI/Window/App" unique_id=142626904 instance=ExtResource("2_toolkit")]
 layout_mode = 0
