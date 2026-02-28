@@ -10,6 +10,8 @@ bg_color = Color(0.65, 0.65, 0.65, 1)
 bg_color = Color(0.16400002, 0.120000005, 0.2, 1)
 
 [resource]
+BodyText/base_type = &"RichTextLabel"
+BodyText/colors/default_color = Color(0, 0, 0, 1)
 ContentPanel/base_type = &"Panel"
 ContentPanel/styles/panel = SubResource("StyleBoxFlat_skxos")
 MarginContainer/constants/margin_bottom = 2

@@ -2,8 +2,9 @@
 
 [ext_resource type="Theme" uid="uid://c4vir164jmy38" path="res://resources/themes/lockedin.tres" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://cwtiv0mjrnno8" path="res://ToolkitPanel.tscn" id="2_toolkit"]
-[ext_resource type="PackedScene" uid="uid://temp_panel_001" path="res://TemporaryPanel.tscn" id="3_temp_panel"]
-[ext_resource type="PackedScene" uid="uid://karma_store_001" path="res://KarmaStorePanel.tscn" id="4_karma_store"]
+[ext_resource type="PackedScene" uid="uid://br84nqe3fyqup" path="res://job_listing.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://temp_panel_001" path="res://TemporaryPanel.tscn" id="4_temp_panel"]
+[ext_resource type="PackedScene" uid="uid://karma_store_001" path="res://KarmaStorePanel.tscn" id="5_karma_store"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ig7tw"]
 bg_color = Color(0.8089983, 0.8089983, 0.80899817, 1)
@@ -177,20 +178,21 @@ offset_right = 86.0
 offset_bottom = 19.999998
 grow_vertical = 2
 
-[node name="TemporaryPanel" parent="UI/Window/App" unique_id=1800727727 instance=ExtResource("3_temp_panel")]
+[node name="TemporaryPanel" parent="UI/Window/App" unique_id=1800727727 instance=ExtResource("4_temp_panel")]
 offset_left = 17.0
 offset_top = 135.0
 offset_right = 300.0
 offset_bottom = 280.0
 
 [node name="ToolkitPanel" parent="UI/Window/App" unique_id=142626904 instance=ExtResource("2_toolkit")]
+visible = false
 layout_mode = 0
-offset_left = 448.0
-offset_top = 88.0
-offset_right = 630.0
-offset_bottom = 449.0
+offset_left = 593.0
+offset_top = 43.0
+offset_right = 793.0
+offset_bottom = 543.0
 
-[node name="KarmaStorePanel" parent="UI/Window/App" instance=ExtResource("4_karma_store")]
+[node name="KarmaStorePanel" parent="UI/Window/App" instance=ExtResource("5_karma_store")]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -202,3 +204,43 @@ offset_right = 200.0
 offset_bottom = 150.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="AppContent" type="Control" parent="UI/Window/App" unique_id=469296234]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 35.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bulletin" type="Control" parent="UI/Window/App/AppContent" unique_id=107572087]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BulletinPanels" type="HBoxContainer" parent="UI/Window/App/AppContent/Bulletin" unique_id=1609740487]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="PostScroll" type="ScrollContainer" parent="UI/Window/App/AppContent/Bulletin/BulletinPanels" unique_id=220583290]
+custom_minimum_size = Vector2(325, 0)
+layout_mode = 2
+
+[node name="PostList" type="VBoxContainer" parent="UI/Window/App/AppContent/Bulletin/BulletinPanels/PostScroll" unique_id=182328084]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="JobListing" parent="UI/Window/App/AppContent/Bulletin/BulletinPanels/PostScroll/PostList" unique_id=257471251 instance=ExtResource("3_h2yge")]
+layout_mode = 2
