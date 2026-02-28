@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bsysuiyx4dqy"]
 
 [ext_resource type="Theme" uid="uid://c4vir164jmy38" path="res://resources/themes/lockedin.tres" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://cwtiv0mjrnno8" path="res://ToolkitPanel.tscn" id="2_toolkit"]
 
 [node name="Main" type="Node2D" unique_id=1141253464]
 
@@ -55,3 +56,10 @@ custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 text = "LockedIn"
 vertical_alignment = 1
+
+[node name="ToolkitPanel" parent="UI/Window/App" unique_id=142626904 instance=ExtResource("2_toolkit")]
+layout_mode = 0
+offset_left = 434.0
+offset_top = 69.0
+offset_right = 630.0
+offset_bottom = 435.0
