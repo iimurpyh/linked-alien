@@ -97,12 +97,6 @@ layout_mode = 2
 text = "LockedIn"
 vertical_alignment = 1
 
-[node name="ToolkitPanel" parent="UI/Window/App" unique_id=142626904 instance=ExtResource("2_toolkit")]
-custom_minimum_size = Vector2(140, 0)
-layout_mode = 0
-position = Vector2(593, 43)
-size = Vector2(200, 500)
-
 [node name="Webpage" type="Panel" parent="UI/Window/App" unique_id=1473917591]
 layout_mode = 1
 anchors_preset = -1
@@ -187,3 +181,9 @@ offset_top = -20.0
 offset_right = 86.0
 offset_bottom = 19.999998
 grow_vertical = 2
+
+[node name="ToolkitPanel" parent="UI/Window/App" unique_id=142626904 instance=ExtResource("2_toolkit")]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 0
+position = Vector2(593, 43)
+size = Vector2(200, 500)
