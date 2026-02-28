@@ -9,7 +9,7 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1bvp3"]
 texture = ExtResource("3_h2yge")
 
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_lquwl"]
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_h2yge"]
 color = Color(0.38039216, 0.38039216, 0.38039216, 1)
 grow_begin = -5.0
 grow_end = -5.0
@@ -70,6 +70,7 @@ vertical_alignment = 1
 
 [node name="AppContent" type="Control" parent="UI/Window/App" unique_id=2133762021]
 layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 35.0
@@ -114,6 +115,7 @@ expand_icon = true
 
 [node name="Bulletin" type="Control" parent="UI/Window/App/AppContent" unique_id=2032573767]
 layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 45.0
@@ -228,10 +230,15 @@ grow_horizontal = 0
 grow_vertical = 0
 text = "Apply"
 
+[node name="HSeparator" type="HSeparator" parent="UI/Window/App/AppContent/Bulletin/BulletinPanels/PostScroll/PostList/JobListing2/JobContent" unique_id=1375585950]
+layout_mode = 2
+theme_override_constants/separation = 8
+theme_override_styles/separator = SubResource("StyleBoxLine_h2yge")
+
 [node name="InfoBody" type="Panel" parent="UI/Window/App/AppContent/Bulletin/BulletinPanels/PostScroll/PostList/JobListing2/JobContent" unique_id=1345604896]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxLine_lquwl")
+theme_type_variation = &"TransparentPanel"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="UI/Window/App/AppContent/Bulletin/BulletinPanels/PostScroll/PostList/JobListing2/JobContent/InfoBody" unique_id=81642843]
 layout_mode = 1
