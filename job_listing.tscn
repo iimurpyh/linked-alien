@@ -1,10 +1,6 @@
 [gd_scene format=3 uid="uid://br84nqe3fyqup"]
 
 [ext_resource type="Theme" uid="uid://c4vir164jmy38" path="res://resources/themes/lockedin.tres" id="1_qbdvo"]
-[ext_resource type="Texture2D" path="res://resources/images/ui/portrait template.png" id="2_eltba"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1bvp3"]
-texture = ExtResource("2_eltba")
 
 [node name="JobListing" type="Panel" unique_id=257471251]
 custom_minimum_size = Vector2(300, 200)
@@ -64,7 +60,6 @@ offset_right = -1.0
 offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_1bvp3")
 
 [node name="TitleText" type="RichTextLabel" parent="JobContent/TitleCard" unique_id=207019119]
 layout_mode = 0
